@@ -7,7 +7,6 @@ spl_autoload_register(function ($class_name) {
     include $class_name . '.php';
 });
 
-
 $api_call=false;
 
 if($_SERVER['REQUEST_METHOD'] == 'GET') {
@@ -18,6 +17,8 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
         $api_call=$_GET['api'];
     }
 }
+
+
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['producttype'])) {
         $producttype = $_POST['producttype'];
